@@ -82,12 +82,16 @@
 #
 # リポジトリに入ってるファイルを git rm じゃなくてふつうに rm した時
 # git add -u .
-
-
+#
 # GitHubでフォークした後にフォーク元の差分を取り込む
 # git remote add upstream <repository> # リモートリポジトリを登録
 # git fetch upstream                   # リモートリポジトリを最新にする
 # git merge upstream/master            # リモートリポジトリのmasterブランチを現在のブランチにマージ
+#
+# reflogを削除
+# git reflog expire --expire=now --all
+# git gc --aggressive --prune=now
+#
 #
 ; }}}
 

@@ -3,7 +3,7 @@
 #
 #{{{
 [ -t 0 ] && stty stop undef
-export PATH=/usr/local/sbin:/usr/local/bin:$PATH
+export PATH=/usr/local/sbin:/usr/local/bin:~/local/bin:$PATH
 export MANPATH=/usr/local/share/man:$MANPATH
 export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
 export LANG='ja_JP.UTF-8'
