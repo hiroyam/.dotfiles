@@ -1,0 +1,15 @@
+set completion-query-items 1000
+set completion-ignore-case on
+"\C-p": history-search-backward
+"\C-n": history-search-forward
+
+# "\C-j": "ll\C-m"
+# "\C-k": "cd ..\C-m"
+
+set visible-stats on
+set show-all-if-ambiguous on
+set print-completions-horizontally on
+# Tab: menu-complete
+# "\M-i": complete
+
+

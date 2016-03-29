@@ -1,0 +1,25 @@
+" put this file under c:\Users\cc\
+nnoremap            H          ^
+vnoremap            H          ^
+nnoremap            L          $
+vnoremap            L          $
+nnoremap            n          nzz
+nnoremap            N          Nzz
+nnoremap            ;          :
+
+set     autoindent                      " smartindentとcindentは設定しない
+set     tabstop=4                       "
+set     shiftwidth=4                    "
+set     softtabstop=4                   "
+set     expandtab                       " タブを空白にする
+set     timeoutlen=500                  " <Nop>キーの待機時間
+set     history=1000                    " コマンド・検索パターンの履歴数
+set     scrolloff=8                     " スクロールオフセット
+set     clipboard=unnamed               " クリップボードを使う
+set     hlsearch                        " 検索結果をハイライトする
+set     incsearch                       " インクリメンタルサーチを使う
+set     nowrapscan                      " 検索をラップしない
+set     backspace=eol,indent,start      " バックスペースで消去できるようにする
+set     number                          " 行番号表示
+set     ignorecase                      " 大文字小文字無視
+set     laststatus=2                    " ステータスライン

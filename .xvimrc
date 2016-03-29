@@ -1,0 +1,8 @@
+nmap H ^
+vmap H ^
+nmap L $
+vmap L $
+nmap n nzz
+nmap N Nzz
+nmap ; :
+set ignorecase

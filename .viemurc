@@ -1,0 +1,17 @@
+# put this file under "c:\Users\cc\"
+nnoremap            H          ^
+vnoremap            H          ^
+nnoremap            L          $
+vnoremap            L          $
+nnoremap            n          nzz
+nnoremap            N          Nzz
+nnoremap            q          :bw!<CR>
+nnoremap            <C-k><C-d> :bw!<CR>
+nnoremap            ;          :
+nnoremap            ,          <C-w><C-w>
+inoremap            <C-b>      <Left>
+inoremap            <C-f>      <Right>
+inoremap            <C-e>      <End>
+inoremap            <C-a>      <Home>
+inoremap            <C-h>      <Backspace>
+inoremap            <C-d>      <Del>

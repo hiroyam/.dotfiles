@@ -1,0 +1,143 @@
+; {{{
+
+#
+# 変更内容を一緒に表示
+# git log --stat
+#
+# アンステージングする
+# git reset HEAD
+#
+# svnのrevertに相当する
+# git checkout <file>
+#
+# なにも変わらない
+# git reset --soft HEAD
+#
+# コミットした事実だけを消す
+# git reset --soft HEAD^
+#
+# コミットを訂正する
+# git commit --amend
+#
+# コミットを訂正する
+# ORIG_HEAD はコミットされていた内容を示す
+# git reset --soft HEAD^
+# git commit -c ORIG_HEAD
+#
+# 作業ツリーを一時保留/再開する
+# git stash
+# git stash pop
+# git stash list
+#
+# マージをリセットする
+# git reset --hard ORIG_HEAD
+#
+# リセットのまとめ
+# http://d.hatena.ne.jp/murank/20110327/1301224770
+#
+# リベースのまとめ
+# http://transitive.info/article/git/command/rebase/
+# git rebase master
+# git add .
+# git rebase --continue
+# git rebase --abort
+#
+# 管理されているファイルのリスト
+# git ls-files
+#
+# 管理を外すまとめ
+# http://d.hatena.ne.jp/mrgoofy33/20100910/1284068244
+# git rm --cached <files>
+# git rm --cached -r <directory>
+#
+# 管理を外して削除する
+# git rm
+#
+# 二分探索
+# git bisect
+# http://progit.org/book/ja/ch6-5.html
+#
+# 管理対象外のファイルとディレクトリを削除する
+# git clean -df
+#
+# サブモジュールを登録
+# git submodule add https://github.com/gmarik/vundle.git .vim/vundle.git
+#
+# サブモジュールを使用
+# git submodule init
+# git submodule update
+#
+# サブモジュールを削除
+# .gitmodulesファイルから該当する行を削除
+#     [submodule "path/to/hoge"]
+#     path = path/to/hoge
+#     url = git://github.com/hoge/hoge.git
+#
+# .git/configファイルから該当する行を削除
+#     [submodule "path/to/hoge"]
+#     url = git://github.com/hoge/hoge.git
+#
+# % git rm --cached path/to/hoge
+# % git commit
+#
+# リポジトリに入ってるファイルを git rm じゃなくてふつうに rm した時
+# git add -u .
+
+
+# GitHubでフォークした後にフォーク元の差分を取り込む
+# git remote add upstream <repository> # リモートリポジトリを登録
+# git fetch upstream                   # リモートリポジトリを最新にする
+# git merge upstream/master            # リモートリポジトリのmasterブランチを現在のブランチにマージ
+#
+; }}}
+
+[user]
+    name = hiroyam
+    email = hiroyam@users.noreply.github.com
+
+[color]
+	ui = auto
+
+[core]
+    editor = vim
+    excludesfile = ~/.gitignore
+	autocrlf = input
+
+[alias]
+    co = checkout
+    ci = commit
+    st = status
+    di = diff HEAD
+    br = branch
+    hi = log -20 --graph --all --date=short --pretty='[%ad] %x09%h %cn%x09%s %Cred%d%Creset' # history
+    er = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim `f`" # コンフリクトを全て開く
+    ls = ls-files
+    uc = ls-files    # under control
+    oc = ls-files -o # out of control
+    ca = !git now && git reset --hard HEAD~ # cancel
+    dt = difftool
+    mt = mergetool
+
+# from: http://iyukki.blog56.fc2.com/blog-entry-119.html
+# ll = !git ls-files -cdmokt|perl -pe 's/\\/.*/\\//'|grep -v '/'
+# ls = !git ls-files -t|perl -pe 's/\\/.*/\\//'|uniq -c
+# la = ls-files -cdmokt
+# his= log --oneline --decorate --graph --all
+
+[diff]
+	tool = vimdiff
+
+[merge]
+	tool = vimdiff
+    keepBackup = false
+
+[mergetool]
+	keepBackup = false
+
+[push]
+	default = matching
+
+[tig "bind"]
+    generic = g move-first-line
+    generic = G move-last-line
+
