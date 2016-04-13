@@ -272,8 +272,9 @@ cnoremap <expr> / getcmdtype() == '/' ? '\/' : '/'
 cnoremap w!! w !sudo tee > /dev/null %
 
 " タイムスタンプを入力
-nnoremap <Space>d <ESC>i<C-R>=strftime("'''%Y/%m/%d'''")<CR><CR><ESC>
-nnoremap <Space>t <ESC>i<C-R>=strftime("%H:%M  ")<CR><ESC>
+inoremap <C-t>          <C-R>=strftime("%H:%M ")<CR>
+nnoremap <Space>t <ESC>i<C-R>=strftime("'''%Y/%m/%d'''")<CR><CR><CR>
+nnoremap <Space>m :e ~/.memo<CR>
 
 "}}}
 
