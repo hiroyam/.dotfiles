@@ -223,33 +223,33 @@ highlight StatusLineNC   ctermfg=238 ctermbg=253 guifg=#455354 guibg=fg
 " vnoremap      x          "_x
 " nnoremap            <Space>,   :e      $MYVIMRC<CR>
 " nnoremap            <Space>5   :source $MYVIMRC<CR>
-nnoremap            H          ^
-vnoremap            H          ^
-nnoremap            L          $
-vnoremap            L          $
-nnoremap            n          nzz
-nnoremap            N          Nzz
-nnoremap            p          :set paste!<CR>p
-nnoremap            <C-k><C-i> :set paste!<CR>
-nnoremap            <C-k><C-m> :w<CR>:!make -B<CR>
-nnoremap            <C-k><C-p> :bp<CR>
-nnoremap            <C-k><C-n> :bn<CR>
-nnoremap            <C-k><C-k> @s
-nnoremap            s          q
-nnoremap            <Tab>      :vs<CR>
-nnoremap            q          :bw!<CR>
-nnoremap            ;          :
-nnoremap            ,          <C-w><C-w>
-nnoremap            -          20<C-w>+
-nnoremap            <Space>q   :qa!<CR>
-nnoremap            <Space>,   :e      ~/.dotfiles/.vimrc<CR>
-nnoremap            <Space>5   :source ~/.dotfiles/.vimrc<CR>
-inoremap            <C-b>      <Left>
-inoremap            <C-f>      <Right>
-inoremap            <C-e>      <End>
-inoremap            <C-a>      <Home>
-inoremap            <C-h>      <Backspace>
-inoremap            <C-d>      <Del>
+nnoremap            H            ^
+vnoremap            H            ^
+nnoremap            L            $
+vnoremap            L            $
+nnoremap            n            nzz
+nnoremap            N            Nzz
+nnoremap            p            :set paste!<CR>p
+nnoremap            <C-k><C-i>   :set paste!<CR>
+nnoremap            <C-k><C-m>   :w<CR>:!make -B<CR>
+nnoremap            <C-k><C-p>   :bp<CR>
+nnoremap            <C-k><C-n>   :bn<CR>
+nnoremap            <C-k><C-k>   @s
+nnoremap            s            q
+nnoremap            <Space><Tab> :vs<CR>
+nnoremap            q            :bw!<CR>
+nnoremap            ;            :
+nnoremap            ,            <C-w><C-w>
+nnoremap            -            20<C-w>+
+nnoremap            <Space>q     :qa!<CR>
+nnoremap            <Space>,     :e      ~/.dotfiles/.vimrc<CR>
+nnoremap            <Space>5     :source ~/.dotfiles/.vimrc<CR>
+inoremap            <C-b>        <Left>
+inoremap            <C-f>        <Right>
+inoremap            <C-e>        <End>
+inoremap            <C-a>        <Home>
+inoremap            <C-h>        <Backspace>
+inoremap            <C-d>        <Del>
 
 " splitを閉じずにバッファを閉じる
 " http://stackoverflow.com/questions/4298910/vim-close-buffer-but-not-split-window
