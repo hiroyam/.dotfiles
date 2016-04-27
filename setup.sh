@@ -8,3 +8,6 @@ do
         ln -s $HOME/.dotfiles/$file $HOME/$file
     fi
 done
+
+# [ -d ~/.pyenv ] && jupyter notebook --generate-config
+
