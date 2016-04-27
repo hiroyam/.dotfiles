@@ -271,8 +271,10 @@ source ~/.zsh/docker-compose.sh
 
 
 ## pyenv
-[ -d ~/.pyenv ] && export PATH=${HOME}/.pyenv/shims:${PATH}
-
+# [ -d ~/.pyenv ] && export PATH=${HOME}/.pyenv/shims:${PATH}
+[ -d ~/.pyenv ] && export PYENV_ROOT="$HOME/.pyenv"
+[ -d ~/.pyenv ] && export PATH="$PYENV_ROOT/bin:$PATH"
+[ -d ~/.pyenv ] && eval "$(pyenv init -)"
 
 ## local固有設定
 [ -f ~/.bashrc.local ] && source ~/.bashrc.local
