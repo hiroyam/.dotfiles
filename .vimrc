@@ -82,6 +82,9 @@
 "
 " Sublime Text
 " 有料なので使わない
+"
+" w3m -cols 256 -dump http://futaba-only.net/list01.html | grep may | wc -l 18
+"
 "}}}
 
 
