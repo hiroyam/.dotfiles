@@ -97,7 +97,7 @@
 ; }}}
 
 [user]
-    name = hiroyam
+	name = hiroyam
     email = hiroyam@users.noreply.github.com
 
 [color]
