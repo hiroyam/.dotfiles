@@ -301,6 +301,13 @@ let g:ctrlp_lazy_update  = 1
 let g:ctrlp_max_files    = 1000
 let g:ctrlp_mruf_max     = 0
 
+let g:ctrlp_prompt_mappings = {
+      \ 'PrtSelectMove("j")':   ['<c-n>', '<down>'],
+      \ 'PrtSelectMove("k")':   ['<c-p>', '<up>'],
+			\ 'PrtHistory(-1)':       ['<c-j>'],
+			\ 'PrtHistory(1)':        ['<c-k>'],
+      \ }
+
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.Trash/*          " Linux/MacOSX
 set wildignore+=*\\.git\\*,*\\.hg\\*,*\\.svn\\*,*\\.Trash\\*  " Windows ('noshellslash')
 
