@@ -17,6 +17,7 @@ export GREP_COLOR='1;36'
 export PS1='\[\033[1;32m\]\u@\h\[\033[0m\] \[\033[1;34m\]\w\[\033[0m\] \[\033[1;31m\]$(__git_ps1 "(%s)")\[\033[0m\] \$ '
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
+export CPATH=/usr/local/include:$CPATH
 
 # http://x.cygwin.com/docs/ug/using-remote-apps.html
 # http://vega.sra-tohoku.co.jp/~kabe/vsd/ssh-x.html
