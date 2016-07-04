@@ -124,6 +124,8 @@ extract () {
   fi
 }
 alias ex='extract'
+
+alias make='make -j'
 #}}}
 
 
