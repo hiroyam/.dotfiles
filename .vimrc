@@ -116,8 +116,8 @@ Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-easytags'
 Bundle 'terryma/vim-expand-region'
 Bundle 'bling/vim-airline'
-Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-fugitive'
+Bundle 'rking/ag.vim'
 
 filetype plugin indent on
 
@@ -166,6 +166,8 @@ set     wildmenu                        " コマンド補完を強化
 set     wildchar=<tab>                  " コマンド補完を開始するキー
 set     wildmode=list:full              " リスト表示，最長マッチ
 set     laststatus=2                    " ステータスライン
+set     wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.Trash/*          " Linux/MacOSX
+set     wildignore+=*\\.git\\*,*\\.hg\\*,*\\.svn\\*,*\\.Trash\\*  " Windows ('noshellslash')
 " set     statusline=\ #{buftabs}%=\ %{(&fenc!=''?&fenc:&enc)}\ %{&ff}\ %Y\ "
 " set     statusline=\ #{buftabs}%=\ %t\ %{(&fenc!=''?&fenc:&enc)}\ %{&ff}\ %Y\ "
 " set     showtabline=2
@@ -293,23 +295,20 @@ nnoremap <Space>m :e ~/.memo<CR>
 
 
 "****************************************
-" ctrlp
-let g:ctrlp_map          = '<Space>p'
-let g:ctrlp_match_window = 'bottom,order:btt,min:30,max:30,results:30'
-let g:ctrlp_show_hidden  = 1
-let g:ctrlp_lazy_update  = 1
-let g:ctrlp_max_files    = 1000
-let g:ctrlp_mruf_max     = 0
-
-let g:ctrlp_prompt_mappings = {
-      \ 'PrtSelectMove("j")':   ['<c-n>', '<down>'],
-      \ 'PrtSelectMove("k")':   ['<c-p>', '<up>'],
-			\ 'PrtHistory(-1)':       ['<c-j>'],
-			\ 'PrtHistory(1)':        ['<c-k>'],
-      \ }
-
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.Trash/*          " Linux/MacOSX
-set wildignore+=*\\.git\\*,*\\.hg\\*,*\\.svn\\*,*\\.Trash\\*  " Windows ('noshellslash')
+" " ctrlp
+" let g:ctrlp_map          = '<Space>p'
+" let g:ctrlp_match_window = 'bottom,order:btt,min:30,max:30,results:30'
+" let g:ctrlp_show_hidden  = 1
+" let g:ctrlp_lazy_update  = 1
+" let g:ctrlp_max_files    = 1000
+" let g:ctrlp_mruf_max     = 0
+"
+" let g:ctrlp_prompt_mappings = {
+"       \ 'PrtSelectMove("j")':   ['<c-n>', '<down>'],
+"       \ 'PrtSelectMove("k")':   ['<c-p>', '<up>'],
+" 			\ 'PrtHistory(-1)':       ['<c-j>'],
+" 			\ 'PrtHistory(1)':        ['<c-k>'],
+"       \ }
 
 
 "****************************************
@@ -406,6 +405,28 @@ let MRU_Window_Height   = 30
 " unite.vim
 " nnoremap <silent> <Space>r   :<C-u>Unite -no-split file_rec<CR>
 " nnoremap <silent> <Space>u   :<C-u>Unite -no-split file_mru<CR>
+
+" " 大文字小文字を区別しない
+" let g:unite_enable_ignore_case = 1
+" let g:unite_enable_smart_case  = 1
+
+" grep検索
+nnoremap <silent> <Space>g :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
+
+" カーソル位置の単語をgrep検索
+nnoremap <silent> <Space>p :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W><CR>
+
+" grep検索結果の再呼出
+nnoremap <silent> <Space>r :<C-u>UniteResume search-buffer<CR>
+
+
+" unite grep に ag(The Silver Searcher) を使う
+if executable('ag')
+  let g:unite_source_grep_command = 'ag'
+  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
+  let g:unite_source_grep_recursive_opt = ''
+endif
+
 
 
 "****************************************
