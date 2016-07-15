@@ -277,9 +277,9 @@ cnoremap <expr> / getcmdtype() == '/' ? '\/' : '/'
 cnoremap w!! w !sudo tee > /dev/null %
 
 " タイムスタンプを入力
-inoremap <C-t>          <C-R>=strftime("** %H:%M **")<CR>
-nnoremap <Space>t <ESC>i<C-R>=strftime("'''%Y/%m/%d'''")<CR><CR><CR>
-nnoremap <Space>m :e ~/.memo<CR>
+inoremap <C-t>      <C-R>=strftime("** %H:%M **")<CR>
+inoremap <C-t><C-t> <C-R>=strftime("'''%Y/%m/%d'''")<CR><CR><CR>
+nnoremap <Space>m   :e ~/.memo<CR>
 
 "}}}
 
@@ -380,6 +380,7 @@ vnoremap    <Space>t         :Tab/
 " autocmd VimEnter * :highlight IndentGuidesOdd  ctermbg=234 guibg=#292929
 " autocmd VimEnter * :highlight IndentGuidesEven ctermbg=236 guibg=#414141
 
+
 "****************************************
 " buftabs
 " let g:buftabs_only_basename = 1
@@ -426,7 +427,6 @@ if executable('ag')
   let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
   let g:unite_source_grep_recursive_opt = ''
 endif
-
 
 
 "****************************************
