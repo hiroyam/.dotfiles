@@ -278,7 +278,7 @@ cnoremap w!! w !sudo tee > /dev/null %
 
 " タイムスタンプを入力
 inoremap <C-t>          <C-R>=strftime("** %H:%M **")<CR>
-nnoremap <Space>t <ESC>i<C-R>=strftime("'''%Y/%m/%d'''")<CR><CR><CR>
+nnoremap <Space>t <ESC>i<C-R>=strftime("###%Y/%m/%d")<CR><CR><CR>
 nnoremap <Space>m :e ~/.memo<CR>
 
 "}}}
