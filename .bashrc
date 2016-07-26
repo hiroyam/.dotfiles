@@ -3,10 +3,11 @@
 #
 #{{{
 [ -t 0 ] && stty stop undef
-export PATH=~/.local/bin:/usr/local/sbin:/usr/local/bin:~/local/bin:$PATH
-export MANPATH=/usr/local/share/man:$MANPATH
-export LD_LIBRARY_PATH=/usr/local/lib:~/local/lib:$LD_LIBRARY_PATH
-export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
+export PATH            =~/.local/sbin:~/.local/bin:/usr/local/sbin:/usr/local/bin:$PATH
+export LD_LIBRARY_PATH =~/.local/lib:/usr/local/lib:$LD_LIBRARY_PATH
+export MANPATH         =~/.local/share/man:/usr/local/share/man:$MANPATH
+export CPATH           =/usr/local/include:$CPATH
+export PYTHONPATH      =/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 export LANG='ja_JP.UTF-8'
 export LISTMAX=200
 export HISTSIZE='100000'
@@ -17,7 +18,6 @@ export GREP_COLOR='1;36'
 export PS1='\[\033[1;32m\]\u@\h\[\033[0m\] \[\033[1;34m\]\w\[\033[0m\] \[\033[1;31m\]$(__git_ps1 "(%s)")\[\033[0m\] \$ '
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
-export CPATH=/usr/local/include:$CPATH
 
 # http://x.cygwin.com/docs/ug/using-remote-apps.html
 # http://vega.sra-tohoku.co.jp/~kabe/vsd/ssh-x.html
@@ -176,14 +176,12 @@ function update() {
   pushd ${HOME}/.dotfiles > /dev/null && git pull && popd > /dev/null && reload
 }
 
-
 function rmf(){
    for file in $*
    do
       __rm_single_file $file
    done
 }
-
 
 function __rm_single_file(){
        if ! [ -d ~/.Trash/ ]
@@ -246,16 +244,13 @@ case "${OSTYPE}" in
         ;;
 esac
 
-
 ## jump
 _Z_CMD=j
 [ -f ~/.zsh/z.sh ] && source ~/.zsh/z.sh
 rm ~/.z.* 2>/dev/null
 
-
 ## git-completion.sh
 source ~/.zsh/git-completion.bash
-
 
 ## git-prompt.sh
 source ~/.zsh/git-prompt.sh
@@ -264,14 +259,12 @@ GIT_PS1_SHOWUPSTREAM=
 GIT_PS1_SHOWUNTRACKEDFILES=
 GIT_PS1_SHOWSTASHSTATE=
 
-
 ## docker
 source ~/.zsh/docker-compose.sh
 
-
 ## rbenv
-[ -d ~/.rbenv  ] && export PATH=${HOME}/.rbenv/bin:${PATH} && eval "$(rbenv init -)"
-
+[ -d ~/.rbenv  ] && export PATH=${HOME}/.rbenv/bin:${PATH}
+[ -d ~/.rbenv  ] && eval "$(rbenv init -)"
 
 ## pyenv
 # [ -d ~/.pyenv ] && export PATH=${HOME}/.pyenv/shims:${PATH}
