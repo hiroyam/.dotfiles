@@ -3,11 +3,11 @@
 #
 #{{{
 [ -t 0 ] && stty stop undef
-export PATH            =~/.local/sbin:~/.local/bin:/usr/local/sbin:/usr/local/bin:$PATH
-export LD_LIBRARY_PATH =~/.local/lib:/usr/local/lib:$LD_LIBRARY_PATH
-export MANPATH         =~/.local/share/man:/usr/local/share/man:$MANPATH
-export CPATH           =/usr/local/include:$CPATH
-export PYTHONPATH      =/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+export PATH=~/.local/sbin:~/.local/bin:/usr/local/sbin:/usr/local/bin:$PATH
+export LD_LIBRARY_PATH=~/.local/lib:/usr/local/lib:$LD_LIBRARY_PATH
+export MANPATH=~/.local/share/man:/usr/local/share/man:$MANPATH
+export CPATH=/usr/local/include:$CPATH
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 export LANG='ja_JP.UTF-8'
 export LISTMAX=200
 export HISTSIZE='100000'
