@@ -523,7 +523,8 @@ inoremap            <C-d>        <Del>
 
 " splitを閉じずにバッファを閉じる
 " http://stackoverflow.com/questions/4298910/vim-close-buffer-but-not-split-window
-nnoremap            <C-k><C-d> :b#<bar>bw!#<CR>
+nnoremap            <C-k><C-d> :b#<bar>bd!#<CR>
+" nnoremap            <C-k><C-d> :b#<bar>bw!#<CR>
 " nnoremap            <C-k><C-d> :bw!<CR>
 
 " コマンドモードの<C-p><C-n>をzshのヒストリ補完にする
