@@ -264,6 +264,7 @@
 " このまとめも100以上用例を転載してあるので、それを読むだけでも多少は効果があるんじゃないかと思う。同じようにコミットログ書きたくねぇなぁ英語わっかんねぇなぁと思っている人にとって、何か役に立つところがあれば幸いである。
 "}}}
 
+
 "========================================
 " Tips
 "========================================
@@ -336,11 +337,19 @@
 " カーソル下の単語でヘルプを引く
 " :h <C-r><C-w><CR>
 "
+" タグジャンプ関連
+" <C-]> 定義に飛ぶ
+" <C-o> 飛ぶ前のバッファに戻る
+" <C-i> <C-o>の逆
+"
 " コマンドを評価する
 " :<C-r>=
 " と打ったあと
 " system("ctags --version")
 " などと入力する
+"
+" 直前に選択していた範囲を、再度選択する
+" gv
 "
 " bash prompt here
 " chere -ia -t mintty -s bash
@@ -366,24 +375,24 @@ set rtp+=~/.vim/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
+Bundle 'tomasr/molokai'
 Bundle 'hirono/vimdoc_ja'
 Bundle 'banyan/recognize_charcode.vim'
 Bundle 'vim-scripts/mru.vim'
-Bundle 'vim-scripts/sudo.vim'
 Bundle 'vim-scripts/AutoComplPop'
 Bundle 'Shougo/unite.vim'
 Bundle 'Shougo/vimfiler.vim'
 Bundle 'Shougo/vimproc.vim'
 Bundle 'tomtom/tcomment_vim'
-Bundle 'godlygeek/tabular'
-Bundle 'tomasr/molokai'
-Bundle 'xolox/vim-misc'
-Bundle 'xolox/vim-easytags'
-Bundle 'terryma/vim-expand-region'
 Bundle 'bling/vim-airline'
+Bundle 'terryma/vim-expand-region'
+Bundle 'godlygeek/tabular'
 Bundle 'tpope/vim-fugitive'
-Bundle 'rking/ag.vim'
-
+Bundle 'soramugi/auto-ctags.vim'
+" Bundle 'xolox/vim-misc'
+" Bundle 'xolox/vim-easytags'
+" Bundle 'vim-scripts/sudo.vim'
+" Bundle 'rking/ag.vim'
 filetype plugin indent on
 
 "}}}
@@ -418,25 +427,25 @@ set     nobackup                        " バックアップファイルを作�
 set     noswapfile                      " スワップファイルを作成しない
 set     autoread                        " 外部で変更された際に自動で再読み込み
 set     number                          " 行番号表示
-set     ignorecase                      " 大文字小文字無視
+set     ignorecase                      " 大文字小文字
 set     vb t_vb=                        " ビジュアルベル
 set     hidden                          " 編集中でもファイルを開けるようにする
 set     lazyredraw                      " コマンド実行中は再描画しない
 set     ttyfast                         " 高速ターミナル接続を行う
 set     virtualedit& virtualedit+=block " 矩形選択で自由に移動する
-set     tags+=tags;                     " タグファイル
 set     mouse=a                         " マウスホイール有効
 set     completeopt=menuone             " 補完オプション
 set     wildmenu                        " コマンド補完を強化
 set     wildchar=<tab>                  " コマンド補完を開始するキー
 set     wildmode=list:full              " リスト表示，最長マッチ
 set     laststatus=2                    " ステータスライン
-set     wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.Trash/*          " Linux/MacOSX
-set     wildignore+=*\\.git\\*,*\\.hg\\*,*\\.svn\\*,*\\.Trash\\*  " Windows ('noshellslash')
+" set     wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.Trash/*          " Linux/MacOSX
+" set     wildignore+=*\\.git\\*,*\\.hg\\*,*\\.svn\\*,*\\.Trash\\*  " Windows ('noshellslash')
 " set     statusline=\ #{buftabs}%=\ %{(&fenc!=''?&fenc:&enc)}\ %{&ff}\ %Y\ "
 " set     statusline=\ #{buftabs}%=\ %t\ %{(&fenc!=''?&fenc:&enc)}\ %{&ff}\ %Y\ "
 " set     showtabline=2
 " set     guioptions-=e
+" set     tags+=tags;                     " タグファイル
 " set     t_Co=256                        " CentOS GNOME端末で256色を表示するのに必要だった
 
 
@@ -507,7 +516,6 @@ nnoremap            <C-k><C-n>   :bn<CR>
 nnoremap            <C-k><C-k>   @s
 nnoremap            s            q
 nnoremap            <Space><Tab> :vs<CR>
-nnoremap            q            :bw!<CR>
 nnoremap            ;            :
 nnoremap            ,            <C-w><C-w>
 nnoremap            -            20<C-w>+
@@ -534,7 +542,7 @@ cnoremap            <Up>       <C-p>
 cnoremap            <Down>     <C-n>
 
 " tagsジャンプの時に複数ある時は一覧表示
-nnoremap <C-]> g<C-]>
+" nnoremap            <C-]>      g<C-]>
 
 " スラッシュの検索を楽にする
 cnoremap <expr> / getcmdtype() == '/' ? '\/' : '/'
@@ -542,10 +550,27 @@ cnoremap <expr> / getcmdtype() == '/' ? '\/' : '/'
 " w!! でスーパーユーザーとして保存（sudoが使える環境限定）
 cnoremap w!! w !sudo tee > /dev/null %
 
+" typo対応
+cnoremap W w
+
 " タイムスタンプを入力
 inoremap <C-t>      <C-R>=strftime("** %H:%M **")<CR>
 inoremap <C-t><C-t> <C-R>=strftime("###%Y/%m/%d")<CR><CR><CR>
 nnoremap <Space>m   :e ~/.memo<CR>
+
+" タグプレビューを開く
+nnoremap <Space>p   <C-w>}
+
+" バッファを閉じる
+nnoremap <silent> q :call Wipeout()<CR>
+function! Wipeout()
+    :silent! wincmd P
+    if &previewwindow
+        :pc!
+    else
+        :bw!
+    endif
+endfunction
 
 "}}}
 
@@ -558,6 +583,13 @@ nnoremap <Space>m   :e ~/.memo<CR>
 "****************************************
 " vim-easytags
 " let g:easytags_async = 1
+" let g:easytags_dynamic_files = 1
+
+
+"****************************************
+" auto-ctags
+let g:auto_ctags = 1
+let g:auto_ctags_directory_list = ['.git', '.svn']
 
 
 "****************************************
@@ -586,7 +618,7 @@ let g:airline#extensions#tabline#enabled      = 1
 let g:airline#extensions#tabline#left_sep     = ''
 let g:airline#extensions#tabline#left_alt_sep = ''
 let g:airline#extensions#tabline#fnamecollapse = 0
-let g:airline_section_c                       = '%{getcwd()}'
+" let g:airline_section_c                       = '%{getcwd()}'
 " let g:airline_section_c                       = '%{getcwd()}/%t'
 " let g:airline_theme                           = 'murmur'
 
@@ -609,13 +641,13 @@ vmap <C-v> <Plug>(expand_region_shrink)
 " tcomment
 let g:tcommentOptions = {'col': 1}
 nnoremap    <Space>/         :TComment<CR>
-vnoremap    <Space>/         :TComment<CR>
+vnoremap    <Space>/         :TComment<CR>gvy
 nnoremap    <Space>/         :TComment<CR>
-vnoremap    <Space>/         :TComment<CR>
+vnoremap    <Space>/         :TComment<CR>gvy
 
 "****************************************
 " tabular
-vnoremap    <Space>t         :Tab/
+" vnoremap    <Space>t         :Tab/
 
 
 "****************************************
@@ -684,7 +716,7 @@ let MRU_Window_Height   = 30
 nnoremap <silent> <Space>g :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
 
 " カーソル位置の単語をgrep検索
-nnoremap <silent> <Space>p :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W><CR>
+nnoremap <silent> <Space>f :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W><CR>
 
 " grep検索結果の再呼出
 nnoremap <silent> <Space>r :<C-u>UniteResume search-buffer<CR>
