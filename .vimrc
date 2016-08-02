@@ -550,9 +550,6 @@ cnoremap <expr> / getcmdtype() == '/' ? '\/' : '/'
 " w!! でスーパーユーザーとして保存（sudoが使える環境限定）
 cnoremap w!! w !sudo tee > /dev/null %
 
-" typo対応
-cnoremap W w
-
 " タイムスタンプを入力
 inoremap <C-t>      <C-R>=strftime("** %H:%M **")<CR>
 inoremap <C-t><C-t> <C-R>=strftime("###%Y/%m/%d")<CR><CR><CR>
