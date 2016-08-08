@@ -395,6 +395,8 @@ Bundle 'soramugi/auto-ctags.vim'
 " Bundle 'rking/ag.vim'
 filetype plugin indent on
 
+nnoremap <Space>bi :BundleClean<CR>:BundleInstall<CR>
+
 "}}}
 
 
