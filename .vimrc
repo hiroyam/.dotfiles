@@ -395,7 +395,7 @@ Bundle 'soramugi/auto-ctags.vim'
 " Bundle 'rking/ag.vim'
 filetype plugin indent on
 
-nnoremap <Space>bi :BundleClean<CR>:BundleInstall<CR>
+nnoremap <Space>b :BundleClean<CR>:BundleInstall<CR>
 
 "}}}
 
@@ -492,6 +492,15 @@ highlight Visual         ctermbg=237
 highlight Search         guifg=#FFFFFF guibg=#95A3A4
 highlight StatusLine     ctermfg=60  ctermbg=232 guifg=#5F5F87 guibg=#080808
 highlight StatusLineNC   ctermfg=238 ctermbg=253 guifg=#455354 guibg=fg
+
+" " Binary
+" autocmd BufReadPre   *.bin let &binary =1
+" autocmd BufReadPost  * if &binary && &modifiable | silent %!xxd -g 1
+" autocmd BufReadPost  * set ft=xxd | endif
+" autocmd BufWritePre  * if &binary | %!xxd -r | endif
+" autocmd BufWritePost * if &binary | silent %!xxd -g 1
+" autocmd BufWritePost * set nomod | endif
+
 
 "}}}
 
@@ -889,7 +898,5 @@ function! Uncrustify(language)
 endfunction
 
 "}}}
-
-
 
 
