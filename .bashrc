@@ -276,3 +276,5 @@ source ~/.zsh/docker-compose.sh
 
 # }}}
 
+
+alias tmux='rm -rf /tmp/tmux* && tmux'
