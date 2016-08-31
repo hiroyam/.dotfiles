@@ -395,6 +395,8 @@ Bundle 'soramugi/auto-ctags.vim'
 " Bundle 'rking/ag.vim'
 filetype plugin indent on
 
+nnoremap <Space>b :BundleClean<CR>:BundleInstall<CR>
+
 "}}}
 
 
@@ -491,6 +493,15 @@ highlight Search         guifg=#FFFFFF guibg=#95A3A4
 highlight StatusLine     ctermfg=60  ctermbg=232 guifg=#5F5F87 guibg=#080808
 highlight StatusLineNC   ctermfg=238 ctermbg=253 guifg=#455354 guibg=fg
 
+" Binary
+autocmd BufReadPre   *.bin let &binary =1
+autocmd BufReadPost  * if &binary && &modifiable | silent %!xxd -g 1
+autocmd BufReadPost  * set ft=xxd | endif
+autocmd BufWritePre  * if &binary | %!xxd -r | endif
+autocmd BufWritePost * if &binary | silent %!xxd -g 1
+autocmd BufWritePost * set nomod | endif
+
+
 "}}}
 
 
@@ -549,9 +560,6 @@ cnoremap <expr> / getcmdtype() == '/' ? '\/' : '/'
 
 " w!! でスーパーユーザーとして保存（sudoが使える環境限定）
 cnoremap w!! w !sudo tee > /dev/null %
-
-" typo対応
-cnoremap W w
 
 " タイムスタンプを入力
 inoremap <C-t>      <C-R>=strftime("** %H:%M **")<CR>
@@ -890,7 +898,5 @@ function! Uncrustify(language)
 endfunction
 
 "}}}
-
-
 
 
