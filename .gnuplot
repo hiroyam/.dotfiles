@@ -17,16 +17,21 @@ set key outside center right reverse Left
 # set xlabel ""
 # set ylabel ""
 
+set autoscale fix
+
 # line styles
-set style line 1 lc rgb '#A6CEE3' lw 2 pt 6 ps 1 # light blue
-set style line 2 lc rgb '#1F78B4' lw 2 pt 6 ps 1 # dark blue
-set style line 3 lc rgb '#B2DF8A' lw 2 pt 6 ps 1 # light green
-set style line 4 lc rgb '#33A02C' lw 2 pt 6 ps 1 # dark green
-set style line 5 lc rgb '#FB9A99' lw 2 pt 6 ps 1 # light red
-set style line 6 lc rgb '#E31A1C' lw 2 pt 6 ps 1 # dark red
-set style line 7 lc rgb '#FDBF6F' lw 2 pt 6 ps 1 # light orange
-set style line 8 lc rgb '#FF7F00' lw 2 pt 6 ps 1 # dark orange
-set style line 9 lc rgb '#666666' lw 2 pt 6 ps 1 # gray
+set style line 1  lc rgb '#A6CEE3' lw 2 pt 6 ps 1 # light blue
+set style line 2  lc rgb '#1F78B4' lw 2 pt 6 ps 1 # dark blue
+set style line 3  lc rgb '#B2DF8A' lw 2 pt 6 ps 1 # light green
+set style line 4  lc rgb '#33A02C' lw 2 pt 6 ps 1 # dark green
+set style line 5  lc rgb '#FB9A99' lw 2 pt 6 ps 1 # light red
+set style line 6  lc rgb '#E31A1C' lw 2 pt 6 ps 1 # dark red
+set style line 7  lc rgb '#FDBF6F' lw 2 pt 6 ps 1 # light orange
+set style line 8  lc rgb '#FF7F00' lw 2 pt 6 ps 1 # dark orange
+set style line 9  lc rgb '#666666' lw 2 pt 6 ps 1 # gray
+set style line 10 lc rgb '#8E68A6' lw 2 pt 6 ps 1 # yukari
+set style line 11 lc rgb '#F5D800' lw 2 pt 6 ps 1 # makimaki
+set style line 12 lc rgb '#E2738A' lw 2 pt 6 ps 1 # akane
 
 # # line styles
 # set style line 1 lc rgb '#A6CEE3' lw 2 pt 6 ps 1 # light blue
