@@ -456,6 +456,7 @@ set     laststatus=2                    " ステータスライン
 " set     guifont=Ricty\ Regular:h14      " フォント
 
 " 行末のスペースを削除
+" http://vi.stackexchange.com/questions/3539/highlight-double-space-in-markdown
 autocmd BufWritePre * call RTrim()
 function! RTrim()
   let s:cursor = getpos(".")
