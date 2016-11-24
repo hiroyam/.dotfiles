@@ -455,8 +455,19 @@ set     laststatus=2                    " ステータスライン
 " set     guioptions-=T                   " ツールバー非表示
 " set     guifont=Ricty\ Regular:h14      " フォント
 
-" 行末のコメントを削除
-autocmd BufWritePre * :%s/\s\+$//e
+" 行末のスペースを削除
+autocmd BufWritePre * call RTrim()
+function! RTrim()
+  let s:cursor = getpos(".")
+  if &filetype == "markdown"
+    %s/\s\+\(\s\{2}\)$/\1/e
+    match Underlined /\s\{2}/
+  else
+    %s/\s\+$//e
+  endif
+  call setpos(".", s:cursor)
+endfunction
+
 
 " 前回終了したカーソル行に移動
 autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g`\"" | endif
