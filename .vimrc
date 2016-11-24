@@ -533,7 +533,7 @@ nnoremap            L            $
 vnoremap            L            $
 nnoremap            n            nzz
 nnoremap            N            Nzz
-nnoremap            p            :set paste!<CR>p
+nnoremap <silent>   p            :set paste!<CR>p:set nopaste<CR>
 nnoremap            <C-k><C-i>   :set paste!<CR>
 nnoremap            <C-k><C-m>   :w<CR>:!make -j<CR>
 nnoremap            <C-k><C-p>   :bp<CR>
