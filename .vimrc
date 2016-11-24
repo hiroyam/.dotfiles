@@ -462,13 +462,15 @@ function! RTrim()
   let s:cursor = getpos(".")
   if &filetype == "markdown"
     %s/\s\+\(\s\{2}\)$/\1/e
-    match Underlined /\s\{2}/
+    match underlined /\s\{2}/
   else
     %s/\s\+$//e
   endif
   call setpos(".", s:cursor)
 endfunction
 
+" タブを明示
+autocmd InsertLeave * match underlined /\t/
 
 " 前回終了したカーソル行に移動
 autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g`\"" | endif
@@ -667,7 +669,7 @@ vnoremap    <Space>/         :TComment<CR>gvy
 
 "****************************************
 " tabular
-" vnoremap    <Space>t         :Tab/
+vnoremap    <Space>t         :Tab/
 
 
 "****************************************
