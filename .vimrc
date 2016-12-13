@@ -515,6 +515,12 @@ autocmd BufWritePre  * if &binary | %!xxd -r | endif
 autocmd BufWritePost * if &binary | silent %!xxd -g 1
 autocmd BufWritePost * set nomod | endif
 
+" autocmd cpp
+autocmd FileType cpp call s:cpp_settings()
+function! s:cpp_settings()
+  set cinoptions+=(0
+endfunction
+
 
 "}}}
 
