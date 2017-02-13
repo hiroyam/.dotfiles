@@ -3,8 +3,8 @@
 #
 #{{{
 [ -t 0 ] && stty stop undef
-export PATH=~/.local/sbin:~/.local/bin:/usr/local/sbin:/usr/local/bin:$PATH
-export LD_LIBRARY_PATH=~/.local/lib:~/.local/lib64:/usr/local/lib:/usr/local/lib64:$LD_LIBRARY_PATH
+export PATH=./bin:~/.local/sbin:~/.local/bin:/usr/local/sbin:/usr/local/bin:$PATH
+export LD_LIBRARY_PATH=./lib:~/.local/lib:~/.local/lib64:/usr/local/lib:/usr/local/lib64:$LD_LIBRARY_PATH
 export MANPATH=~/.local/share/man:/usr/local/share/man:$MANPATH
 export CPATH=/usr/local/include:$CPATH
 # export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
