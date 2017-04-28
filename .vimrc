@@ -419,7 +419,8 @@ set     timeoutlen=500                  " <Nop>キーの待機時間
 set     history=1000                    " コマンド・検索パターンの履歴数
 set     scrolloff=8                     " スクロールオフセット
 set     clipboard+=autoselect           " クリップボードを使う
-set     clipboard+=unnamed              " クリップボードを使う
+" set     clipboard+=unnamed              " クリップボードを使う
+set     clipboard=unnamedplus              " クリップボードを使う
 set     foldmethod=marker               " 折りたたみ形式
 set     hlsearch                        " 検索結果をハイライトする
 set     incsearch                       " インクリメンタルサーチを使う
