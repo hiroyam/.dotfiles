@@ -146,3 +146,5 @@
     generic = g move-first-line
     generic = G move-last-line
 
+[fetch]
+	prune = true
