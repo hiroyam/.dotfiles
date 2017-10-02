@@ -126,6 +126,8 @@ extract () {
 alias ex='extract'
 
 alias make='make -j'
+
+alias tmux='rm -rf /tmp/tmux* && tmux'
 #}}}
 
 
@@ -277,4 +279,5 @@ alias activate="source /Users/cc/.pyenv/versions/anaconda3-4.1.0/bin/activate"
 # }}}
 
 
-alias tmux='rm -rf /tmp/tmux* && tmux'
+# added by Miniconda3 4.3.21 installer
+export PATH="/home/cc/miniconda3/bin:$PATH"
