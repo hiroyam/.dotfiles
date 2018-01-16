@@ -526,16 +526,16 @@ function! s:cpp_settings()
 endfunction
 
 " transparent
-" if !has('gui_running')
-"     augroup transparent
-"         autocmd!
-"         autocmd VimEnter,ColorScheme * highlight Normal ctermbg=none
-"         autocmd VimEnter,ColorScheme * highlight LineNr ctermbg=none
-"         autocmd VimEnter,ColorScheme * highlight SignColumn ctermbg=none
-"         autocmd VimEnter,ColorScheme * highlight VertSplit ctermbg=none
-"         autocmd VimEnter,ColorScheme * highlight NonText ctermbg=none
-"     augroup END
-" endif
+if !has('gui_running')
+    augroup transparent
+        autocmd!
+        autocmd VimEnter,ColorScheme * highlight Normal ctermbg=none
+        autocmd VimEnter,ColorScheme * highlight LineNr ctermbg=none
+        autocmd VimEnter,ColorScheme * highlight SignColumn ctermbg=none
+        autocmd VimEnter,ColorScheme * highlight VertSplit ctermbg=none
+        autocmd VimEnter,ColorScheme * highlight NonText ctermbg=none
+    augroup END
+endif
 
 
 "}}}
