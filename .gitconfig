@@ -114,7 +114,8 @@
     st = status
     di = diff HEAD
     br = branch
-    hi = log -20 --graph --all --date=short --pretty='[%ad] %x09%h %cn%x09%s %Cred%d%Creset' # history
+    hi = log --oneline --decorate --graph --all
+#     hi = log -20 --graph --all --date=short --pretty='[%ad] %x09%h %cn%x09%s %Cred%d%Creset' # history
     er = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim `f`" # コンフリクトを全て開く
     ls = ls-files
     uc = ls-files    # under control
@@ -146,3 +147,5 @@
     generic = g move-first-line
     generic = G move-last-line
 
+[fetch]
+	prune = true

@@ -359,6 +359,8 @@
 "
 " w3m -cols 256 -dump http://futaba-only.net/list01.html | grep may | wc -l 18
 "
+" 画像リサイズ
+" mogrify -resize 800x *
 "}}}
 
 
@@ -383,6 +385,7 @@ Bundle 'vim-scripts/mru.vim'
 Bundle 'Shougo/unite.vim'
 Bundle 'Shougo/vimfiler.vim'
 Bundle 'Shougo/vimproc.vim'
+Bundle 'thinca/vim-qfreplace'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'bling/vim-airline'
 Bundle 'terryma/vim-expand-region'

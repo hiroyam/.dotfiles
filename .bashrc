@@ -59,7 +59,7 @@ linux*)
     alias   ll='ls -lah --color'
     alias  lll='ls -lah --color'
     alias   ls='ls -ah  --color'
-    alias open='gnome-open'
+    alias open='gnome-open 2>/dev/null'
     ;;
 cygwin*)
     alias    l='ls -lah --color'
@@ -126,6 +126,8 @@ extract () {
 alias ex='extract'
 
 alias make='make -j'
+
+alias tmux='rm -rf /tmp/tmux* && tmux'
 #}}}
 
 
@@ -277,4 +279,8 @@ alias activate="source /Users/cc/.pyenv/versions/anaconda3-4.1.0/bin/activate"
 # }}}
 
 
-alias tmux='rm -rf /tmp/tmux* && tmux'
+# added by Miniconda3 4.3.21 installer
+export PATH="/home/cc/miniconda3/bin:$PATH"
+
+# image resize by imagemagick
+# mogrify -resize 500x *
