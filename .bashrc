@@ -7,7 +7,7 @@ export PATH=./bin:~/.local/sbin:~/.local/bin:/usr/local/sbin:/usr/local/bin:$PAT
 export LD_LIBRARY_PATH=./lib:~/.local/lib:~/.local/lib64:/usr/local/lib:/usr/local/lib64:$LD_LIBRARY_PATH
 export MANPATH=~/.local/share/man:/usr/local/share/man:$MANPATH
 export CPATH=/usr/local/include:$CPATH
-export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+export PYTHONPATH=~/.pyenv/versions/anaconda3-4.1.0/lib/python3.5/site-packages:$PYTHONPATH
 export LANG='ja_JP.UTF-8'
 export LISTMAX=200
 export HISTSIZE='100000'
@@ -277,10 +277,6 @@ alias activate="source /Users/cc/.pyenv/versions/anaconda3-4.1.0/bin/activate"
 [ -f ~/.bashrc.local ] && source ~/.bashrc.local
 
 # }}}
-
-
-# added by Miniconda3 4.3.21 installer
-export PATH="/home/cc/miniconda3/bin:$PATH"
 
 # image resize by imagemagick
 # mogrify -resize 500x *
