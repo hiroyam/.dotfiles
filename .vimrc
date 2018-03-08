@@ -175,7 +175,7 @@ set     hidden                          " 編集中でもファイルを開け�
 set     lazyredraw                      " コマンド実行中は再描画しない
 set     ttyfast                         " 高速ターミナル接続を行う
 set     virtualedit& virtualedit+=block " 矩形選択で自由に移動する
-set     mouse=a                         " マウスホイール有効
+" set     mouse=a                         " マウスホイール有効
 set     completeopt=menuone             " 補完オプション
 set     wildmenu                        " コマンド補完を強化
 set     wildchar=<tab>                  " コマンド補完を開始するキー
@@ -670,5 +670,4 @@ function! Uncrustify(language)
 endfunction
 
 "}}}
-
 
