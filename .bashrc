@@ -7,7 +7,7 @@ export PATH=./bin:~/.local/sbin:~/.local/bin:/usr/local/sbin:/usr/local/bin:$PAT
 export LD_LIBRARY_PATH=./lib:~/.local/lib:~/.local/lib64:/usr/local/lib:/usr/local/lib64:$LD_LIBRARY_PATH
 export MANPATH=~/.local/share/man:/usr/local/share/man:$MANPATH
 export CPATH=/usr/local/include:$CPATH
-export PYTHONPATH=~/.pyenv/versions/anaconda3-4.1.0/lib/python3.5/site-packages:$PYTHONPATH
+# export PYTHONPATH=~/.pyenv/versions/anaconda3-4.1.0/lib/python3.5/site-packages:$PYTHONPATH
 export LANG='ja_JP.UTF-8'
 export LISTMAX=200
 export HISTSIZE='100000'
@@ -271,7 +271,7 @@ source ~/.zsh/docker-compose.sh
 [ -d ~/.pyenv ] && export PYENV_ROOT="$HOME/.pyenv"
 [ -d ~/.pyenv ] && export PATH="$PYENV_ROOT/bin:$PATH"
 [ -d ~/.pyenv ] && eval "$(pyenv init -)"
-alias activate="source /Users/cc/.pyenv/versions/anaconda3-4.1.0/bin/activate"
+# alias activate="source /Users/cc/.pyenv/versions/anaconda3-4.1.0/bin/activate"
 
 ## local固有設定
 [ -f ~/.bashrc.local ] && source ~/.bashrc.local
