@@ -278,5 +278,3 @@ alias activate="source /Users/cc/.pyenv/versions/anaconda3-4.1.0/bin/activate"
 
 # }}}
 
-# image resize by imagemagick
-# mogrify -resize 500x *
