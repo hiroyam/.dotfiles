@@ -111,7 +111,7 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 Bundle 'tomasr/molokai'
-Bundle 'hirono/vimdoc_ja'
+Bundle 'vim-jp/vimdoc-ja'
 Bundle 'banyan/recognize_charcode.vim'
 Bundle 'vim-scripts/mru.vim'
 " Bundle 'vim-scripts/AutoComplPop'
