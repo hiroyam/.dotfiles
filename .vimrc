@@ -334,8 +334,9 @@ cnoremap <expr> / getcmdtype() == '/' ? '\/' : '/'
 cnoremap w!! w !sudo tee > /dev/null %
 
 " タイムスタンプを入力
-inoremap <C-t>      <C-R>=strftime("** %H:%M **")<CR>
-inoremap <C-t><C-t> <C-R>=strftime("###%Y/%m/%d")<CR><CR><CR>
+inoremap <C-t>      <C-R>=strftime("%Y-%m-%d %H:%M:%S +09:00")<CR>
+" inoremap <C-t>      <C-R>=strftime("** %H:%M **")<CR>
+" inoremap <C-t><C-t> <C-R>=strftime("###%Y/%m/%d")<CR><CR><CR>
 nnoremap <Space>m   :e ~/.memo<CR>
 
 " タグプレビューを開く
