@@ -187,7 +187,7 @@ set     laststatus=2                    " ステータスライン
 " set     showtabline=2
 " set     guioptions-=e
 " set     tags+=tags;                     " タグファイル
-" set     t_Co=256                        " CentOS GNOME端末で256色を表示するのに必要だった
+set     t_Co=256                        " CentOS GNOME端末で256色を表示するのに必要だった
 " set     mouse=a                         " マウスホイール有効
 
 
