@@ -1,0 +1,19 @@
+{
+  "load_extensions": {
+    "nbextensions_configurator/config_menu/main": false,
+    "contrib_nbextensions_help_item/main": false,
+    "vim_binding/vim_binding": true,
+    "keyboard_shortcut_editor/main": false,
+    "codemirror_mode_extensions/main": false,
+    "select_keymap/main": false
+  },
+  "Notebook": {
+    "Toolbar": false,
+    "Header": false
+  },
+  "Cell": {
+    "cm_config": {
+      "lineNumbers": true
+    }
+  }
+}

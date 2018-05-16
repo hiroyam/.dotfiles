@@ -5,6 +5,7 @@
 [ -t 0 ] && stty stop undef
 export PATH=./bin:~/.local/sbin:~/.local/bin:/usr/local/sbin:/usr/local/bin:$PATH
 export LD_LIBRARY_PATH=./lib:~/.local/lib:~/.local/lib64:/usr/local/lib:/usr/local/lib64:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH #cuda
 export MANPATH=~/.local/share/man:/usr/local/share/man:$MANPATH
 export CPATH=/usr/local/include:$CPATH
 export PYTHONPATH=~/.pyenv/versions/anaconda3-4.1.0/lib/python3.5/site-packages:$PYTHONPATH
@@ -127,7 +128,7 @@ alias ex='extract'
 
 alias make='make -j'
 
-alias tmux='rm -rf /tmp/tmux* && tmux'
+# alias tmux='rm -rf /tmp/tmux* && tmux'
 #}}}
 
 
@@ -271,6 +272,7 @@ source ~/.zsh/docker-compose.sh
 [ -d ~/.pyenv ] && export PYENV_ROOT="$HOME/.pyenv"
 [ -d ~/.pyenv ] && export PATH="$PYENV_ROOT/bin:$PATH"
 [ -d ~/.pyenv ] && eval "$(pyenv init -)"
+
 
 ## local固有設定
 [ -f ~/.bashrc.local ] && source ~/.bashrc.local
