@@ -391,6 +391,7 @@
     ca = !git now && git reset --hard HEAD~ # cancel
     dt = difftool
     mt = mergetool
+    now = commit -m '' --allow-empty-message
 
 # from: http://iyukki.blog56.fc2.com/blog-entry-119.html
 # ll = !git ls-files -cdmokt|perl -pe 's/\\/.*/\\//'|grep -v '/'
