@@ -15,5 +15,13 @@
     "cm_config": {
       "lineNumbers": true
     }
+  },
+  "keys": {
+    "command": {
+      "bind": {
+        "cmd-ctrl-c": "jupyter-notebook:interrupt-kernel",
+        "cmd-9": "jupyter-notebook:interrupt-kernel"
+      }
+    }
   }
 }
