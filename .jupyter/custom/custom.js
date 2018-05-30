@@ -2,8 +2,8 @@
 require([
   'nbextensions/vim_binding/vim_binding',   // depends your installation
 ], function() {
-  CodeMirror.Vim.map("H", "<Plug>(vim-binding-^)", "normal");
-  CodeMirror.Vim.map("L", "<Plug>(vim-binding-$)", "normal");
+  CodeMirror.Vim.map("H", "^", "normal");
+  CodeMirror.Vim.map("L", "$", "normal");
 });
 
 // Configure Jupyter Keymap

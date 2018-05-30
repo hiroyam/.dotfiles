@@ -5,6 +5,9 @@
 .*~
 *~
 *.log
+.ipynb_checkpoints
+*.h5
+old
 
 tags
 

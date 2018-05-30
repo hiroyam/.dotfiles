@@ -1,11 +1,13 @@
 {
   "load_extensions": {
-    "nbextensions_configurator/config_menu/main": false,
+    "nbextensions_configurator/config_menu/main": true,
     "contrib_nbextensions_help_item/main": false,
     "vim_binding/vim_binding": true,
     "keyboard_shortcut_editor/main": false,
     "codemirror_mode_extensions/main": false,
-    "select_keymap/main": false
+    "select_keymap/main": false,
+    "codefolding/main": false,
+    "collapsible_headings/main": false
   },
   "Notebook": {
     "Toolbar": false,
