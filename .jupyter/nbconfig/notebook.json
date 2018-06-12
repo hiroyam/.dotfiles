@@ -7,10 +7,24 @@
     "codemirror_mode_extensions/main": false,
     "select_keymap/main": false,
     "codefolding/main": false,
-    "collapsible_headings/main": false
+    "collapsible_headings/main": false,
+    "limit_output/main": false,
+    "scroll_down/main": true,
+    "move_selected_cells/main": true,
+    "freeze/main": true,
+    "cell_filter/cell_filter": false,
+    "execute_time/ExecuteTime": true,
+    "highlight_selected_word/main": false,
+    "livemdpreview/livemdpreview": true,
+    "scratchpad/main": false,
+    "skip-traceback/main": true,
+    "hinterland/hinterland": false,
+    "varInspector/main": true,
+    "gist_it/main": true,
+    "notify/notify": true
   },
   "Notebook": {
-    "Toolbar": false,
+    "Toolbar": true,
     "Header": false
   },
   "Cell": {
@@ -22,8 +36,16 @@
     "command": {
       "bind": {
         "cmd-ctrl-c": "jupyter-notebook:interrupt-kernel",
-        "cmd-9": "jupyter-notebook:interrupt-kernel"
+        "cmd-9": "jupyter-notebook:interrupt-kernel",
+        "ctrl-o v": "varInspector:toggle-variable-inspector",
+        "ctrl-0": "varInspector:toggle-variable-inspector"
       }
     }
+  },
+  "limit_stream": true,
+  "limit_execute_result": true,
+  "scrollDownIsEnabled": true,
+  "notify": {
+    "play_sound": true
   }
 }
