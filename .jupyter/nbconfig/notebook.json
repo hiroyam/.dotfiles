@@ -7,7 +7,16 @@
     "codemirror_mode_extensions/main": false,
     "select_keymap/main": false,
     "codefolding/main": false,
-    "collapsible_headings/main": false
+    "collapsible_headings/main": false,
+    "livemdpreview/livemdpreview": true,
+    "execute_time/ExecuteTime": true,
+    "skip-traceback/main": true,
+    "freeze/main": true,
+    "move_selected_cells/main": true,
+    "scroll_down/main": true,
+    "varInspector/main": true,
+    "gist_it/main": true,
+    "notify/notify": true
   },
   "Notebook": {
     "Toolbar": false,
