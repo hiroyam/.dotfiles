@@ -8,6 +8,7 @@
     "select_keymap/main": false,
     "codefolding/main": false,
     "collapsible_headings/main": false,
+<<<<<<< HEAD
     "limit_output/main": false,
     "scroll_down/main": true,
     "move_selected_cells/main": true,
@@ -19,6 +20,14 @@
     "scratchpad/main": false,
     "skip-traceback/main": true,
     "hinterland/hinterland": false,
+=======
+    "livemdpreview/livemdpreview": true,
+    "execute_time/ExecuteTime": true,
+    "skip-traceback/main": true,
+    "freeze/main": true,
+    "move_selected_cells/main": true,
+    "scroll_down/main": true,
+>>>>>>> 68beb578bdd6f66fd6899d9afc5a1a89bf283dac
     "varInspector/main": true,
     "gist_it/main": true,
     "notify/notify": true
