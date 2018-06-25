@@ -3,12 +3,12 @@
 #
 #{{{
 [ -t 0 ] && stty stop undef
+# export PATH=./bin:~/.local/sbin:~/.local/bin:/usr/local/sbin:/usr/local/bin:$PATH
 export PATH=/usr/bin:./bin:~/.local/sbin:~/.local/bin:/usr/local/sbin:/usr/local/bin:$PATH
 export LD_LIBRARY_PATH=./lib:~/.local/lib:~/.local/lib64:/usr/local/lib:/usr/local/lib64:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH #cuda
 export MANPATH=~/.local/share/man:/usr/local/share/man:$MANPATH
 export CPATH=/usr/local/include:$CPATH
-# export PYTHONPATH=~/.pyenv/versions/anaconda3-4.1.0/lib/python3.5/site-packages:$PYTHONPATH
 export LANG='ja_JP.UTF-8'
 export LISTMAX=200
 export HISTSIZE='100000'

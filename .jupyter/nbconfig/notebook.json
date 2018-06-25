@@ -8,20 +8,34 @@
     "select_keymap/main": false,
     "codefolding/main": false,
     "collapsible_headings/main": false,
+<<<<<<< HEAD
     "limit_output/main": false,
     "scroll_down/main": true,
     "move_selected_cells/main": false,
     "freeze/main": false,
     "cell_filter/cell_filter": false,
+=======
+    "livemdpreview/livemdpreview": false,
+>>>>>>> 6e1c0c6ba70d68affd045942162ca6c65b6a0ea8
     "execute_time/ExecuteTime": true,
     "highlight_selected_word/main": false,
     "livemdpreview/livemdpreview": false,
     "scratchpad/main": false,
     "skip-traceback/main": true,
+<<<<<<< HEAD
     "hinterland/hinterland": false,
     "varInspector/main": true,
     "gist_it/main": false,
     "notify/notify": true
+=======
+    "freeze/main": false,
+    "move_selected_cells/main": false,
+    "scroll_down/main": true,
+    "varInspector/main": true,
+    "gist_it/main": false,
+    "notify/notify": true,
+    "autoscroll/main": true
+>>>>>>> 6e1c0c6ba70d68affd045942162ca6c65b6a0ea8
   },
   "Notebook": {
     "Toolbar": true,
@@ -42,10 +56,16 @@
       }
     }
   },
+<<<<<<< HEAD
   "limit_stream": true,
   "limit_execute_result": true,
   "scrollDownIsEnabled": true,
   "notify": {
     "play_sound": true
   }
+=======
+  "scrollDownIsEnabled": false,
+  "autoscroll_set_on_load": true,
+  "autoscroll_starting_threshold": "-1"
+>>>>>>> 6e1c0c6ba70d68affd045942162ca6c65b6a0ea8
 }
