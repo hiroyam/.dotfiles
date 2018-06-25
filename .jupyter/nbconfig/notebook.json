@@ -8,18 +8,19 @@
     "select_keymap/main": false,
     "codefolding/main": false,
     "collapsible_headings/main": false,
-    "livemdpreview/livemdpreview": true,
+    "livemdpreview/livemdpreview": false,
     "execute_time/ExecuteTime": true,
     "skip-traceback/main": true,
-    "freeze/main": true,
-    "move_selected_cells/main": true,
+    "freeze/main": false,
+    "move_selected_cells/main": false,
     "scroll_down/main": true,
     "varInspector/main": true,
-    "gist_it/main": true,
-    "notify/notify": true
+    "gist_it/main": false,
+    "notify/notify": true,
+    "autoscroll/main": true
   },
   "Notebook": {
-    "Toolbar": false,
+    "Toolbar": true,
     "Header": false
   },
   "Cell": {
@@ -34,5 +35,8 @@
         "cmd-9": "jupyter-notebook:interrupt-kernel"
       }
     }
-  }
+  },
+  "scrollDownIsEnabled": false,
+  "autoscroll_set_on_load": true,
+  "autoscroll_starting_threshold": "-1"
 }

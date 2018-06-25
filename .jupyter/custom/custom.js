@@ -4,6 +4,7 @@ require([
 ], function() {
   CodeMirror.Vim.map("H", "^", "normal");
   CodeMirror.Vim.map("L", "$", "normal");
+  CodeMirror.Vim.map("q", ":q", "normal");
 });
 
 // Configure Jupyter Keymap
@@ -13,7 +14,7 @@ require([
 ], function(vim_binding, ns) {
   vim_binding.on_ready_callbacks.push(function(){
     var km = ns.keyboard_manager;
-    km.edit_shortcuts.add_shortcut('ctrl-2', 'vim-binding:change-cell-to-markdown', true);
+    // km.edit_shortcuts.add_shortcut('ctrl-2', 'vim-binding:change-cell-to-markdown', true);
     km.edit_shortcuts.events.trigger('rebuild.QuickHelp');
   });
 });
