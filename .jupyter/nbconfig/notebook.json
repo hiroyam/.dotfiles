@@ -19,9 +19,9 @@
     "scratchpad/main": false,
     "skip-traceback/main": true,
     "hinterland/hinterland": false,
-    "varInspector/main": true,
+    "varInspector/main": false,
     "gist_it/main": false,
-    "notify/notify": true
+    "notify/notify": false
   },
   "Notebook": {
     "Toolbar": true,
