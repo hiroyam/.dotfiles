@@ -1,5 +1,6 @@
 reset
 
+# set terminal canvas
 # set terminal x11 enhanced font ',10' persist
 set terminal pngcairo size 640,360 enhanced font 'DejaVuSansMono,8'
 set output "plot.png"
