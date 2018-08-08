@@ -25,7 +25,7 @@
     "zenmode/main": false
   },
   "Notebook": {
-    "Toolbar": true,
+    "Toolbar": false,
     "Header": false
   },
   "Cell": {
@@ -39,8 +39,19 @@
         "cmd-ctrl-c": "jupyter-notebook:interrupt-kernel",
         "cmd-9": "jupyter-notebook:interrupt-kernel",
         "ctrl-o v": "varInspector:toggle-variable-inspector",
-        "ctrl-0": "varInspector:toggle-variable-inspector"
-      }
+        "ctrl-0": "varInspector:toggle-variable-inspector",
+        "0,0": "jupyter-notebook:restart-kernel-and-clear-output",
+        "<cmd-shift-enter>": "jupyter-notebook:run-all-cells-above",
+        "cmd-shift-enter": "vim-binding:run-all-cells-above",
+        "cmdtrl-shift-enter": "jupyter-notebook:run-all-cells-above",
+        "cmd-r a a": "jupyter-notebook:run-all-cells-above",
+        "ctrl-r,a,a": "jupyter-notebook:run-all-cells-above",
+        "ctrl-r": "jupyter-notebook:run-all-cells-above"
+      },
+      "unbind": [
+        "0,0",
+        "shift-enter"
+      ]
     }
   },
   "limit_stream": true,
@@ -48,5 +59,9 @@
   "scrollDownIsEnabled": true,
   "notify": {
     "play_sound": true
+  },
+  "ExecuteTime": {
+    "clear_timings_on_clear_output": true,
+    "display_right_aligned": false
   }
 }
