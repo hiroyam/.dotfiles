@@ -22,9 +22,9 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 
 # http://x.cygwin.com/docs/ug/using-remote-apps.html
 # http://vega.sra-tohoku.co.jp/~kabe/vsd/ssh-x.html
-case "${OSTYPE}" in
-darwin* | cygwin*) export DISPLAY=:0.0 ;;
-esac
+# case "${OSTYPE}" in
+# darwin* | cygwin*) export DISPLAY=:0.0 ;;
+# esac
 
 #}}}
 
