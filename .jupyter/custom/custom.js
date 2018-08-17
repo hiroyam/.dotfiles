@@ -15,6 +15,7 @@ require([
   vim_binding.on_ready_callbacks.push(function(){
     var km = ns.keyboard_manager;
     // km.edit_shortcuts.add_shortcut('ctrl-2', 'vim-binding:change-cell-to-markdown', true);
+    // km.edit_shortcuts.add_shortcut('ctrl-r', 'vim-binding:run-all-cells-above', true)
     km.edit_shortcuts.events.trigger('rebuild.QuickHelp');
   });
 });
