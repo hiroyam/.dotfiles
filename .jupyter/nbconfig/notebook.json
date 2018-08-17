@@ -9,7 +9,7 @@
     "codefolding/main": false,
     "collapsible_headings/main": false,
     "limit_output/main": false,
-    "scroll_down/main": true,
+    "scroll_down/main": false,
     "move_selected_cells/main": false,
     "freeze/main": false,
     "cell_filter/cell_filter": false,
@@ -17,11 +17,11 @@
     "highlight_selected_word/main": false,
     "livemdpreview/livemdpreview": false,
     "scratchpad/main": false,
-    "skip-traceback/main": true,
+    "skip-traceback/main": false,
     "hinterland/hinterland": false,
-    "varInspector/main": true,
+    "varInspector/main": false,
     "gist_it/main": false,
-    "notify/notify": true
+    "notify/notify": false
   },
   "Notebook": {
     "Toolbar": true,
