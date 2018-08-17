@@ -6,7 +6,7 @@
     "keyboard_shortcut_editor/main": false,
     "codemirror_mode_extensions/main": false,
     "select_keymap/main": false,
-    "codefolding/main": false,
+    "codefolding/main": true,
     "collapsible_headings/main": false,
     "limit_output/main": false,
     "scroll_down/main": false,
@@ -45,8 +45,7 @@
         "cmd-shift-enter": "vim-binding:run-all-cells-above",
         "cmdtrl-shift-enter": "jupyter-notebook:run-all-cells-above",
         "cmd-r a a": "jupyter-notebook:run-all-cells-above",
-        "ctrl-r,a,a": "jupyter-notebook:run-all-cells-above",
-        "ctrl-r": "jupyter-notebook:run-all-cells-above"
+        "ctrl-r,a,a": "jupyter-notebook:run-all-cells-above"
       },
       "unbind": [
         "0,0",
