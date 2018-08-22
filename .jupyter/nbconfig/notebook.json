@@ -1,5 +1,6 @@
 {
   "load_extensions": {
+    "jupyter-js-widgets/extension": true,
     "nbextensions_configurator/config_menu/main": true,
     "contrib_nbextensions_help_item/main": false,
     "vim_binding/vim_binding": true,
@@ -22,7 +23,8 @@
     "varInspector/main": false,
     "gist_it/main": false,
     "notify/notify": false,
-    "zenmode/main": false
+    "zenmode/main": false,
+    "runtools/main": false
   },
   "Notebook": {
     "Toolbar": false,
@@ -61,6 +63,6 @@
   },
   "ExecuteTime": {
     "clear_timings_on_clear_output": true,
-    "display_right_aligned": false
+    "clear_timings_on_kernel_restart": true
   }
 }
