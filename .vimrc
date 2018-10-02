@@ -420,7 +420,8 @@ vmap <C-v> <Plug>(expand_region_shrink)
 
 "****************************************
 " tcomment
-let g:tcommentOptions = {'col': 1}
+"let g:tcommentOptions = {'col': 1}
+let g:tcomment#options = {'col': 1}
 nnoremap    <Space>/         :TComment<CR>
 vnoremap    <Space>/         :TComment<CR>gvy
 nnoremap    <Space>/         :TComment<CR>
