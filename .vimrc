@@ -124,8 +124,8 @@ Bundle 'bling/vim-airline'
 Bundle 'terryma/vim-expand-region'
 Bundle 'godlygeek/tabular'
 Bundle 'tpope/vim-fugitive'
-Bundle 'soramugi/auto-ctags.vim'
-Bundle 'rust-lang/rust.vim'
+" Bundle 'soramugi/auto-ctags.vim'
+" Bundle 'rust-lang/rust.vim'
 " Bundle 'xolox/vim-misc'
 " Bundle 'xolox/vim-easytags'
 " Bundle 'vim-scripts/sudo.vim'
@@ -369,8 +369,8 @@ endfunction
 
 "****************************************
 " auto-ctags
-let g:auto_ctags = 1
-let g:auto_ctags_directory_list = ['.git', '.svn']
+" let g:auto_ctags = 1
+" let g:auto_ctags_directory_list = ['.git', '.svn']
 
 
 "****************************************
