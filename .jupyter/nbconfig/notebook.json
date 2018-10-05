@@ -1,68 +1,12 @@
 {
   "load_extensions": {
-    "jupyter-js-widgets/extension": true,
     "nbextensions_configurator/config_menu/main": true,
-    "contrib_nbextensions_help_item/main": false,
+    "contrib_nbextensions_help_item/main": true,
     "vim_binding/vim_binding": true,
-    "keyboard_shortcut_editor/main": false,
-    "codemirror_mode_extensions/main": false,
-    "select_keymap/main": false,
-    "codefolding/main": true,
-    "collapsible_headings/main": false,
-    "limit_output/main": false,
-    "scroll_down/main": false,
-    "move_selected_cells/main": false,
-    "freeze/main": false,
-    "cell_filter/cell_filter": false,
-    "execute_time/ExecuteTime": true,
-    "highlight_selected_word/main": false,
-    "livemdpreview/livemdpreview": false,
-    "scratchpad/main": false,
-    "skip-traceback/main": false,
-    "hinterland/hinterland": false,
-    "varInspector/main": false,
-    "gist_it/main": false,
-    "notify/notify": false,
-    "zenmode/main": false,
-    "runtools/main": false
+    "codefolding/main": true
   },
   "Notebook": {
-    "Toolbar": false,
-    "Header": false
-  },
-  "Cell": {
-    "cm_config": {
-      "lineNumbers": true
-    }
-  },
-  "keys": {
-    "command": {
-      "bind": {
-        "cmd-ctrl-c": "jupyter-notebook:interrupt-kernel",
-        "cmd-9": "jupyter-notebook:interrupt-kernel",
-        "ctrl-o v": "varInspector:toggle-variable-inspector",
-        "ctrl-0": "varInspector:toggle-variable-inspector",
-        "0,0": "jupyter-notebook:restart-kernel-and-clear-output",
-        "<cmd-shift-enter>": "jupyter-notebook:run-all-cells-above",
-        "cmd-shift-enter": "vim-binding:run-all-cells-above",
-        "cmdtrl-shift-enter": "jupyter-notebook:run-all-cells-above",
-        "cmd-r a a": "jupyter-notebook:run-all-cells-above",
-        "ctrl-r,a,a": "jupyter-notebook:run-all-cells-above"
-      },
-      "unbind": [
-        "0,0",
-        "shift-enter"
-      ]
-    }
-  },
-  "limit_stream": true,
-  "limit_execute_result": true,
-  "scrollDownIsEnabled": true,
-  "notify": {
-    "play_sound": true
-  },
-  "ExecuteTime": {
-    "clear_timings_on_clear_output": true,
-    "clear_timings_on_kernel_restart": true
+    "Header": false,
+    "Toolbar": false
   }
 }
