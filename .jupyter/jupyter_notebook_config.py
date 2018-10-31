@@ -230,7 +230,7 @@ c.NotebookApp.open_browser = False
 #    from notebook.auth import passwd; passwd()
 #
 #  The string should be of the form type:salt:hashed-password.
-c.NotebookApp.password = u'sha1:6593f4f7325e:fd483fe4f556a4d6cd872acd578c3c97e1e7c649'
+# c.NotebookApp.password = u''
 
 ## Forces users to use a password for the Notebook server. This is useful in a
 #  multi user environment, for instance when everybody in the LAN can access each
@@ -282,6 +282,7 @@ c.NotebookApp.port = 80
 #  Setting to an empty string disables authentication altogether, which is NOT
 #  RECOMMENDED.
 #c.NotebookApp.token = '<generated>'
+c.NotebookApp.token = ''
 
 ## Supply overrides for the tornado.web.Application that the Jupyter notebook
 #  uses.
