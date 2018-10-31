@@ -20,12 +20,12 @@
     "skip-traceback/main": false,
     "hinterland/hinterland": false,
     "varInspector/main": false,
-    "gist_it/main": false,
+    "gist_it/main": true,
     "notify/notify": false,
     "zenmode/main": false
   },
   "Notebook": {
-    "Toolbar": false,
+    "Toolbar": true,
     "Header": false
   },
   "Cell": {
@@ -62,5 +62,6 @@
   "ExecuteTime": {
     "clear_timings_on_clear_output": true,
     "display_right_aligned": false
-  }
+  },
+  "gist_it_personal_access_token": "27234b43e9fec873270b048c9d840be767e0744d"
 }
