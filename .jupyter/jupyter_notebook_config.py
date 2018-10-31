@@ -165,12 +165,12 @@
 ## (bytes/sec) Maximum rate at which stream output can be sent on iopub before
 #  they are limited.
 #c.NotebookApp.iopub_data_rate_limit = 1000000
-# c.NotebookApp.iopub_data_rate_limit = 1000000000
+c.NotebookApp.iopub_data_rate_limit = 1e10
 
 ## (msgs/sec) Maximum rate at which messages can be sent on iopub before they are
 #  limited.
 #c.NotebookApp.iopub_msg_rate_limit = 1000
-# c.NotebookApp.iopub_msg_rate_limit = 1000000000
+c.NotebookApp.iopub_msg_rate_limit = 1e10
 
 ## The IP address the notebook server will listen on.
 c.NotebookApp.ip = '0.0.0.0'
