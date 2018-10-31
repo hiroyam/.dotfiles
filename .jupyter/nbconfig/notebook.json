@@ -1,8 +1,9 @@
 {
   "load_extensions": {
     "nbextensions_configurator/config_menu/main": true,
-    "contrib_nbextensions_help_item/main": false,
+    "contrib_nbextensions_help_item/main": true,
     "vim_binding/vim_binding": true,
+<<<<<<< HEAD
     "keyboard_shortcut_editor/main": false,
     "codemirror_mode_extensions/main": false,
     "select_keymap/main": false,
@@ -64,4 +65,12 @@
     "display_right_aligned": false
   },
   "gist_it_personal_access_token": "27234b43e9fec873270b048c9d840be767e0744d"
+=======
+    "codefolding/main": true
+  },
+  "Notebook": {
+    "Header": false,
+    "Toolbar": false
+  }
+>>>>>>> 62ceaae6fd5bda32b53faf683a20f8cf98ec4192
 }
