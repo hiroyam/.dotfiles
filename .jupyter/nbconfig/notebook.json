@@ -3,36 +3,30 @@
     "nbextensions_configurator/config_menu/main": true,
     "contrib_nbextensions_help_item/main": true,
     "vim_binding/vim_binding": true,
-<<<<<<< HEAD
     "codefolding/main": true,
     "execute_time/ExecuteTime": true,
-    "gist_it/main": true
-=======
-<<<<<<< HEAD
+    "gist_it/main": true,
     "keyboard_shortcut_editor/main": false,
     "codemirror_mode_extensions/main": false,
     "select_keymap/main": false,
-    "codefolding/main": true,
     "collapsible_headings/main": false,
     "limit_output/main": false,
     "scroll_down/main": false,
     "move_selected_cells/main": false,
     "freeze/main": false,
     "cell_filter/cell_filter": false,
-    "execute_time/ExecuteTime": true,
     "highlight_selected_word/main": false,
     "livemdpreview/livemdpreview": false,
     "scratchpad/main": false,
     "skip-traceback/main": false,
     "hinterland/hinterland": false,
     "varInspector/main": false,
-    "gist_it/main": true,
     "notify/notify": false,
     "zenmode/main": false
   },
   "Notebook": {
-    "Toolbar": true,
-    "Header": false
+    "Header": false,
+    "Toolbar": true
   },
   "Cell": {
     "cm_config": {
@@ -70,19 +64,4 @@
     "display_right_aligned": false
   },
   "gist_it_personal_access_token": "27234b43e9fec873270b048c9d840be767e0744d"
-=======
-    "codefolding/main": true
->>>>>>> 1536d52a8b0b15f74be8fcf4069f62e548667b3a
-  },
-  "Notebook": {
-    "Header": false,
-    "Toolbar": true
-  },
-  "gist_it_personal_access_token": "27234b43e9fec873270b048c9d840be767e0744d",
-  "Cell": {
-    "cm_config": {
-      "lineNumbers": true
-    }
-  }
->>>>>>> 62ceaae6fd5bda32b53faf683a20f8cf98ec4192
 }
