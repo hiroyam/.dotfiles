@@ -3,10 +3,18 @@
     "nbextensions_configurator/config_menu/main": true,
     "contrib_nbextensions_help_item/main": true,
     "vim_binding/vim_binding": true,
-    "codefolding/main": true
+    "codefolding/main": true,
+    "execute_time/ExecuteTime": true,
+    "gist_it/main": true
   },
   "Notebook": {
     "Header": false,
-    "Toolbar": false
+    "Toolbar": true
+  },
+  "gist_it_personal_access_token": "27234b43e9fec873270b048c9d840be767e0744d",
+  "Cell": {
+    "cm_config": {
+      "lineNumbers": true
+    }
   }
 }
