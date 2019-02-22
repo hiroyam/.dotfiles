@@ -40,7 +40,7 @@ alias grep='grep -EI --color=auto --exclude-dir={.svn,.git,.hg}'
 alias diff='diff -wB'
 
 # pandoc
-alias pd='pandoc -s --self-contained -t html5 -c github.css'
+alias pd='pandoc -s --self-contained -t html5 -c ~/.pandoc/github.css'
 
 # docker
 alias dc='docker-compose'
