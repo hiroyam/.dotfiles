@@ -39,6 +39,9 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 alias grep='grep -EI --color=auto --exclude-dir={.svn,.git,.hg}'
 alias diff='diff -wB'
 
+# pandoc
+alias pd='pandoc -s --self-contained -t html5 -c github.css'
+
 # docker
 alias dc='docker-compose'
 alias dm='docker-machine'
