@@ -10,6 +10,7 @@
 *.h5
     old
 migrated
+__pycache__
 
 tags
 

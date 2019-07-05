@@ -5,6 +5,8 @@ require([
   CodeMirror.Vim.map("H", "^", "normal");
   CodeMirror.Vim.map("L", "$", "normal");
   CodeMirror.Vim.map("q", ":q", "normal");
+  CodeMirror.Vim.map("H", "^", "visual");
+  CodeMirror.Vim.map("L", "$", "visual");
 });
 
 // Configure Jupyter Keymap
